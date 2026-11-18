@@ -1,0 +1,27 @@
+title: Living Word
+tagline: Bibelundervisning av Fleury Ndongozi
+description: Undervisning från Guds ord – på svenska, franska och engelska.
+author: Fleury Ndongozi
+lang: sv
+
+# Ändra till namnet på ditt repo (t.ex. "/living-word").
+# Om du senare kopplar en egen domän (t.ex. livingword.se), sätt baseurl: ""
+baseurl: "/living-word"
+url: ""
+
+collections:
+  undervisningar:
+    output: true
+    permalink: /undervisning/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: undervisningar
+    values:
+      layout: teaching
+
+markdown: kramdown
+exclude:
+  - README.md
+  - mall-undervisning.md

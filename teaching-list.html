@@ -1,0 +1,14 @@
+{% assign items = site.undervisningar | sort: "date" | reverse %}
+{% assign n = include.limit | default: 1000 %}
+<ul class="cards">
+  {% for t in items limit: n %}
+  <li class="card">
+    <a href="{{ t.url | relative_url }}">
+      <span class="meta">{{ t.date | date: "%Y-%m-%d" }}{% if t.sprak %} · {{ t.sprak }}{% endif %}</span>
+      <h3>{{ t.title }}</h3>
+      {% if t.bibeltext %}<span class="ref">{{ t.bibeltext }}</span>{% endif %}
+      {% if t.summary %}<p>{{ t.summary }}</p>{% endif %}
+    </a>
+  </li>
+  {% endfor %}
+</ul>

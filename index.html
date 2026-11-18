@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<section class="hero">
+  <div class="wrap narrow">
+    <p class="eyebrow">Bibelundervisning</p>
+    <h1>Living Word</h1>
+    <p class="lead">Undervisning som tar Guds ord på allvar – för tro, lärjungaskap och ett liv byggt på Kristus.</p>
+    <a class="button" href="{{ '/undervisning/' | relative_url }}">Läs undervisningarna</a>
+  </div>
+</section>
+
+<section class="wrap">
+  <h2 class="section-title">Senaste undervisningar</h2>
+  {% include teaching-list.html limit=6 %}
+</section>

@@ -1,0 +1,89 @@
+:root {
+  --ink: #1f2a2e;
+  --muted: #5d6b70;
+  --paper: #fbf8f2;
+  --card: #ffffff;
+  --line: #e7e0d2;
+  --accent: #8a5a2b;
+  --accent-dark: #6b4420;
+  --deep: #1d3b44;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Source Sans 3", system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+h1, h2, h3, .brand {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+a { color: var(--accent); }
+a:hover { color: var(--accent-dark); }
+
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+.narrow { max-width: 720px; }
+
+/* Header */
+.site-header { border-bottom: 1px solid var(--line); background: var(--paper); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.brand { font-size: 1.7rem; color: var(--deep); text-decoration: none; }
+nav a { margin-left: 24px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: .95rem; }
+nav a:hover { color: var(--accent); }
+
+/* Hero */
+.hero { background: var(--deep); color: #f4efe6; padding: 96px 0 88px; text-align: center; }
+.hero h1 { font-size: clamp(3rem, 8vw, 5rem); margin: 8px 0 16px; }
+.hero .lead { font-size: 1.2rem; opacity: .9; margin: 0 auto 32px; }
+.hero .eyebrow { color: #d9b98c; }
+
+.eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; font-weight: 600; color: var(--accent); margin: 0; }
+
+.button {
+  display: inline-block; padding: 12px 28px; border-radius: 999px;
+  background: #d9b98c; color: var(--deep); font-weight: 600; text-decoration: none;
+}
+.button:hover { background: #e8cda6; color: var(--deep); }
+
+/* Lists */
+.section-title, .page-title { font-size: 2.2rem; margin: 64px 0 24px; }
+.cards { list-style: none; padding: 0; margin: 0 0 80px; display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); }
+.card a {
+  display: block; height: 100%; padding: 24px; background: var(--card);
+  border: 1px solid var(--line); border-radius: 10px; color: var(--ink); text-decoration: none;
+  transition: border-color .15s, transform .15s;
+}
+.card a:hover { border-color: var(--accent); transform: translateY(-2px); }
+.card h3 { font-size: 1.6rem; margin: 6px 0; }
+.card .meta { font-size: .8rem; color: var(--muted); }
+.card .ref { font-size: .9rem; color: var(--accent); font-weight: 600; }
+.card p { margin: 10px 0 0; color: var(--muted); font-size: .98rem; }
+
+/* Teaching */
+.teaching { padding: 64px 24px 80px; }
+.teaching h1 { font-size: clamp(2.4rem, 6vw, 3.4rem); margin: 8px 0 8px; }
+.scripture { font-weight: 600; color: var(--deep); margin: 0 0 32px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.content h2 { font-size: 1.9rem; margin: 40px 0 8px; }
+.content blockquote {
+  margin: 32px 0; padding: 20px 24px; background: #f3ece0;
+  border-left: 4px solid var(--accent); border-radius: 0 8px 8px 0;
+}
+.content blockquote p { margin: 0; }
+.back { margin-top: 48px; }
+article.content { padding: 48px 24px 80px; }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--muted); font-size: .9rem; }
+
+@media (max-width: 560px) {
+  nav a { margin-left: 14px; }
+  .brand { font-size: 1.4rem; }
+}

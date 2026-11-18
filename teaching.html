@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="teaching wrap narrow">
+  <p class="eyebrow">{% if page.serie %}{{ page.serie }} · {% endif %}{{ page.date | date: "%Y-%m-%d" }}</p>
+  <h1>{{ page.title }}</h1>
+  {% if page.bibeltext %}<p class="scripture">{{ page.bibeltext }}</p>{% endif %}
+  <div class="content">
+    {{ content }}
+  </div>
+  <p class="back"><a href="{{ '/undervisning/' | relative_url }}">← Alla undervisningar</a></p>
+</article>
